@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Proyek - Bagus Kurniawan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            card: '#1e1e1e',
+                            blue: '#06b6d4', 
+                            glow: '#22d3ee', 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(6, 182, 212, 0.5)',
+                        'neon-hover': '0 0 30px rgba(34, 211, 238, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0a0a0a; color: white; }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Style untuk tombol filter aktif */
+        .filter-btn.active {
+            background-color: #06b6d4;
+            color: black;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+        }
+        /* Animasi untuk item yang muncul */
+        .project-item {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-white">
+                B<span class="text-brand-glow">K</span>.
+            </a>
+            <div class="flex items-center gap-6 text-sm font-semibold">
+                <a href="index.html" class="text-gray-300 hover:text-brand-glow transition duration-300 hidden md:block">Beranda</a>
+                <a href="index.html#contact" class="px-5 py-2 border border-brand-blue text-brand-blue rounded-full hover:bg-brand-blue hover:text-black transition duration-300 shadow-neon">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-12 px-6 text-center">
+        <div class="container mx-auto" data-aos="fade-down">
+            <p class="text-brand-glow font-bold tracking-widest mb-2 uppercase text-sm">Portofolio Lengkap</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Semua Karya Saya</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Kumpulan proyek yang telah saya kerjakan, mulai dari website e-commerce, dashboard analitik, hingga desain UI/UX mobile apps.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons (Sekarang Berfungsi) -->
+    <section class="pb-12 px-6">
+        <div class="container mx-auto flex justify-center flex-wrap gap-4" data-aos="fade-up">
+            <button class="filter-btn active px-6 py-2 rounded-full border border-white/10 hover:border-brand-blue transition duration-300" data-filter="all">Semua</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-brand-blue hover:text-brand-glow transition duration-300 text-gray-400" data-filter="web">Web Dev</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-brand-blue hover:text-brand-glow transition duration-300 text-gray-400" data-filter="uiux">UI/UX Design</button>
+            <button class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-brand-blue hover:text-brand-glow transition duration-300 text-gray-400" data-filter="graphic">Graphic Design</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="pb-24 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Project 1: E-Commerce (Web Dev) -->
+                <a href="project 1.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="web" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="img/e-comerse.jpg" alt="E-Commerce" class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Web Dev</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">E-Commerce App</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Platform belanja online modern dengan fitur keranjang dan pembayaran.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Django</span>
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Css</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: Travel Web (Web Dev) -->
+                <a href="project 3.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="web" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="img/travelk.png" alt="Travel Web" class="w-full h-full object-cover object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Web Dev</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Travel Web Booking</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Website booking travel responsif dengan fitur pencarian destinasi.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Tailwind</span>
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">JS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3: Finance Dashboard (Web Dev) -->
+                <a href="project 2.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="web" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/Laporan.png" alt="" class="object-top object-cover">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Web Dev</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">SP4N-LAPOR</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Sistem pengaduan pelayanan publik nasional - NTB</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Django</span>
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Tailwind</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4: Health Tracker (UI/UX) -->
+                <a href="project 4.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="uiux" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/E-Carrer.png" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">UI/UX</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">E-Carrer</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Desain antarmuka E-Carrer Universitas Hamzanwadi</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Figma</span>
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Prototyping</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 5: Game Landing (Web Dev) -->
+                <a href="project 5.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="graphic" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/bemft.png" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Graphic</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Media Matrikulasi</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Bagian dari acara matrikulasi Fakultas teknik</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Photoshop</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 6: Brand Identity (Graphic Design) - Diubah agar kategori Graphic ada isinya -->
+                <a href="project 6.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="graphic" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/media infofest.jpg" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Graphic</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Anggota Jurnalistik Informatika festival</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Menjadi anggota dari devisi Jurnalistik di acara Informatika festival    </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Photoshop</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="project 7.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="graphic" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/co media.png" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Graphic</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Coordinator Media Pengabdian Kepada Masyarakat</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Dipercayakan menjadi Coordinator divisi media Pengabdian kepada Masyarakat 2025 Desa Embung Raja Kec Terara lombok Timur himpunan Mahasiswa proggram Sttudi Informatika</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Photoshop</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="project 8.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="uiux" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/Cover.jpg" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">UI/UX</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Newsletter</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Membuat Homepage Newsletteruntuk perusahaan startapp india</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Figma</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="project 9.html" class="project-item group relative overflow-hidden rounded-xl bg-brand-card border border-white/5 hover:border-brand-blue/50 transition duration-300 block" data-category="graphic" data-aos="fade-up">
+                    <div class="h-56 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900 group-hover:scale-110 transition duration-500">
+                            <img src="img/Islamic fest.png" alt="">
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-brand-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-white/10">Graphic</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Media Islamic fest</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">direkrut menjadi Anggota Media Islamic Fest Bem Fakultas teknik Universitas Hamzanwadi</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 rounded bg-brand-dark border border-white/10 text-gray-300">Photoshop</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <!-- Pagination (Visual) -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 Bagus Kurniawan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+        
+        // Filter Script
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 1. Ubah Style Tombol
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-blue', 'text-black', 'shadow-neon');
+                    b.classList.add('text-gray-400');
+                });
+                
+                btn.classList.add('active', 'bg-brand-blue', 'text-black', 'shadow-neon');
+                btn.classList.remove('text-gray-400');
+
+                // 2. Filter Logika
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+
+                    if (filterValue === 'all' || itemCategory === filterValue) {
+                        item.classList.remove('hidden');
+                        item.classList.add('block');
+                        // Reset animasi AOS
+                        item.setAttribute('data-aos', 'fade-up');
+                    } else {
+                        item.classList.remove('block');
+                        item.classList.add('hidden');
+                    }
+                });
+                
+                // Refresh AOS agar layout tidak berantakan setelah filter
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

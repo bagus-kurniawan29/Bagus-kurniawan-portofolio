@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - Bagus Kurniawan</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            card: '#1e1e1e',
+                            blue: '#06b6d4', 
+                            glow: '#22d3ee', 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(6, 182, 212, 0.5)',
+                        'neon-hover': '0 0 30px rgba(34, 211, 238, 0.7)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0a0a0a; color: white; }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%; z-index: -1; pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider text-white">
+                B<span class="text-brand-glow">K</span>.
+            </a>
+            <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-brand-glow transition duration-300">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="pt-32 pb-12 px-6">
+        <div class="container mx-auto" data-aos="fade-up">
+            <p class="text-brand-glow font-bold tracking-widest mb-2 uppercase text-sm">Design Grapich</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Media Matrikulasi</h1>
+            
+            <!-- Banner Image -->
+            <div class="w-full h-64 md:h-[500px] rounded-2xl overflow-hidden shadow-neon border border-white/10 relative group">
+                <div class="absolute inset-0  group-hover:bg-transparent transition duration-500"></div>
+                <!-- Menggunakan gambar yang sama dengan index.html sebagai contoh banner -->
+                <img src="img/bemft.png" alt="Project Banner" class="w-full h-full object-cover object-top">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-12 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <!-- Main Content -->
+                <div class="md:col-span-2 space-y-8" data-aos="fade-right">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-white">Deskripsi Proyek</h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            Matrikulasi merupakan PKKMB versi Fakultsa Teknik Universitas Hamzanwadi yang bertujuan untuk
+                            mengenalkan mahasiswa baru pada lingkungan kampus, sistem pembelajaran, serta budaya akademik di
+                            universitas. Sebagai bagian dari upaya digitalisasi, proyek ini bertujuan untuk mengembangkan
+                            sebuah platform web yang memungkinkan mahasiswa baru untuk mengakses materi matrikulasi,
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mt-4">
+                            mengikuti kuis interaktif, serta berpartisipasi dalam forum diskusi. Platform ini dirancang
+                            dengan antarmuka yang user-friendly dan responsif, sehingga dapat diakses dengan mudah melalui
+                            berbagai perangkat, termasuk smartphone dan tablet. Dengan adanya platform web ini, diharapkan
+                            proses matrikulasi dapat berjalan lebih efisien dan efektif, serta memberikan pengalaman belajar
+                            yang menyenangkan bagi mahasiswa baru.
+                        </p>
+                    </div>
+
+                    <!-- Gallery Grid (Placeholder Images) -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-6 text-white">Galeri Tampilan</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="h-48 bg-gray-800 rounded-lg overflow-hidden border border-white/5 hover:border-brand-blue/50 transition">
+                                <div class="w-full h-full bg-gray-900 flex items-center justify-center text-gray-500 text-sm">
+                                    <img src="img/dok matrikulasi.png" alt="" class="w-full h-full object-cover object-center">
+                                </div>
+                            </div>
+                            <div class="h-48 bg-gray-800 rounded-lg overflow-hidden border border-white/5 hover:border-brand-blue/50 transition">
+                                <div class="w-full h-full bg-gray-900 flex items-center justify-center text-gray-500 text-sm">
+                                    <img src="img/dok matrikulasi 1.png" alt="" class="w-full h-full object-cover object-center">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+
+                <!-- Sidebar Info -->
+                <div class="md:col-span-1 space-y-8" data-aos="fade-left">
+                    <div class="bg-brand-card p-6 rounded-xl border border-white/5">
+                        <h3 class="text-xl font-bold mb-4 border-b border-white/10 pb-2">Informasi</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-gray-500 text-sm block">Klien</span>
+                                <span class="text-white font-medium">Bem Fakultas Teknik</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 text-sm block">Tahun</span>
+                                <span class="text-white font-medium">2025</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-500 text-sm block">Kategori</span>
+                                <span class="text-white font-medium">Design Grapich</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-card p-6 rounded-xl border border-white/5">
+                        <h3 class="text-xl font-bold mb-4 border-b border-white/10 pb-2">Teknologi</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-black border border-white/10 rounded-full text-sm text-gray-300 flex items-center gap-2">
+                                <i class="devicon-photoshop-plain text-blue-700 text-2xl"></i> Photoshop
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 Bagus Kurniawan.
+            </p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
+</body>
+</html>
